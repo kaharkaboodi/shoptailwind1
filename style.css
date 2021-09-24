@@ -1,0 +1,60 @@
+.Mymenu {
+    height: 20vh
+}
+
+.MyImageHeight {
+    height: 35vh;
+    width: 100%;
+}
+
+.Mycolors {
+    width: 200px;
+    flex-wrap: wrap;
+}
+
+.MyColor1 {
+    background: red;
+    width: 30px;
+    height: 10px
+}
+
+.MyColor2 {
+    background: blue;
+    width: 30px;
+    height: 10px;
+}
+
+.MyColor3 {
+    background: yellow;
+    width: 30px;
+    height: 10px;
+}
+
+.MyButton {
+    width: 100%;
+    height: 35px
+}
+
+.Myoverflow {
+    white-space: nowrap
+}
+
+.Myslider {
+    display: inline-block;
+    margin: 2vw;
+}
+
+@media (max-width: 640px) {
+    .Mymenu {
+        height: auto;
+    }
+    .MyImageHeight {
+        width: 49vw;
+    }
+    .Myslider {
+        width: 50vw;
+    }
+    .MyButton {
+        width: 49.3vw;
+    }
+}
