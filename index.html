@@ -8,19 +8,33 @@
     <title>Document</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
+     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+   </head>
 
 <body>
-    <ul class="sm:flex sm:flex-row Mymenu bg-red-200 justify-evenly items-center text-lg font-semibold shadow-lg z-10
-    flex-col flex">
+    <div class="Mymenu w-full text-gray-700 bg-red-300">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="p-4 flex flex-row items-center justify-between">
+                <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-whit">ERFAN KAHARKABOODI</a>
+                <button class="md:hidden rounded-l" @click="open = !open">
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow bg-red-300 pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row Mymenu">
+                <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-yellow-400 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0"
+                    href="#">Blog</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4" href="#">Portfolio</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4" href="#">Product</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4" href="#">About</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4" href="#">Contact</a>
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+            </nav>
+            </div>
+        </div>
 
-        <li class=" box-content p-3 sm:w-2/12"><a href="#" class=" hover:bg-red-600 sm:p-10 p-3">home</a> </li>
-        <li class=" box-content p-3 sm:w-2/12"> <a href="#" class=" hover:bg-red-600 sm:p-10 p-3">flowers</a> </li>
-        <li class=" box-content p-3 sm:w-2/12"> <a href="#" class=" hover:bg-red-600 sm:p-10 p-3">Books</a> </li>
-        <li class=" box-content p-3 sm:w-2/12"><a href="#" class=" hover:bg-red-600 sm:p-10 p-3">Pencils</a> </li>
-        <li class=" box-content p-3 sm:w-2/12"> <a href="#" class=" hover:bg-red-600 sm:p-10 p-3">Fish</a> </li>
-        <li class=" box-content p-3 sm:w-2/12"> <a href="#" class=" hover:bg-red-600 sm:p-10 p-3">Acssory</a> </li>
-    </ul>
     <h1 class="text-4xl font-bold text-center m-5 bg-red-50 p-4 shadow-xl">Chairs</h1>
     <ul class=" m-5 overflow-auto bg-red-50 Myoverflow p-5">
         <li class="Myslider border-green-500 border-dashed border-2 h-auto w-1/5 sm:max-w-md">
