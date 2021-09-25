@@ -1,7 +1,3 @@
-.Mymenu {
-    height: 20vh
-}
-
 .MyImageHeight {
     height: 35vh;
     width: 100%;
@@ -49,12 +45,27 @@
         height: auto;
     }
     .MyImageHeight {
-        width: 49vw;
+        width: 54vw;
     }
     .Myslider {
-        width: 50vw;
+        width: 55vw;
     }
     .MyButton {
-        width: 49.3vw;
+        width: 54.5vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Mymenu {
+        height: auto;
+    }
+    .MyImageHeight {
+        width: 45vw;
+    }
+    .Myslider {
+        width: 45vw;
+    }
+    .MyButton {
+        width: 44.5vw;
     }
 }
